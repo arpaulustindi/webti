@@ -1,0 +1,23 @@
+created:
+    - database/factories/MatkulFactory.php
+    - database/factories/PeriodeFactory.php
+    - database/factories/TracerFactory.php
+    - database/factories/PublikasiFactory.php
+    - database/factories/FasilitasFactory.php
+    - database/migrations/2024_11_06_155455_create_matkuls_table.php
+    - database/migrations/2024_11_06_155456_create_periodes_table.php
+    - database/migrations/2024_11_06_155457_create_tracers_table.php
+    - database/migrations/2024_11_06_155458_create_publikasis_table.php
+    - database/migrations/2024_11_06_155459_create_fasilitas_table.php
+    - app/Models/Matkul.php
+    - app/Models/Periode.php
+    - app/Models/Tracer.php
+    - app/Models/Publikasi.php
+    - app/Models/Fasilitas.php
+models:
+    User: {  }
+    Matkul: { semseter: integer, kode: string, matkul: string, jenis: string, gambar: string, modul: 'string nullable', rps: 'string nullable', pendukung: 'string nullable', deskripsi: string }
+    Periode: { periode: date, keterangan: string, aktif: boolean }
+    Tracer: { periode_id: 'foreign nullable', nama: string, tahun_masuk: integer, tahun_lulus: integer, nim: 'string nullable', waktu_tunggu: string, kantor: string, lingkup: string, bidang: string, penetrasi: string, hp: string, domisili: string }
+    Publikasi: { judul: string, deskripsi: string, file: string }
+    Fasilitas: { fasilitas: string, kategori: string, foto: string, deskripsi: string }
